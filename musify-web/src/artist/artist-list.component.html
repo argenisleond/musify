@@ -1,0 +1,47 @@
+
+<!------ Include the above in your HEAD tag ---------->
+<div class="container" *ngIf="artists?.length == 0">
+  <h2>Nos encontramos cargando la información........</h2>
+</div>
+<div class="container" *ngIf="artists?.length > 0">
+  <div class="mail-box">
+    <aside class="lg-side">
+      <div class="inbox-head">
+        <h3>{{title}}</h3>
+        <form action="#" class="pull-right position">
+          <label>Estilos: </label>
+          <div class="input-append">
+            <select class="form-control" (change)="styleChanged($event.target.value)" required>
+              <option [selected]="true" value="">Todos</option>
+              <option *ngFor="let style of styles" value="{{ style.id }}">{{style.name}}</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="inbox-body">
+        <div class="mail-option">
+          <table class="table table-inbox table-hover">
+            <tbody>
+            <tr class="unread">
+              <td class="view-message">Nombre</td>
+              <td class="view-message">Años</td>
+              <td class="view-message">Opciones</td>
+            </tr>
+            <tr class="" *ngFor="let artist of artists">
+              <td class="view-message">{{artist.name}}</td>
+              <td class="view-message">{{artist.year}}</td>
+              <td class="view-message"><input class="btn btn-info" type="button"(click)="detailArtist(artist.id)" value="Detalle"/></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </aside>
+  </div><br>
+  <div class="text-center">
+    <div>
+      <input class="form-control btn btn-success" type="button" value="Incluir artista" (click)="createArtist()"/>
+      <input class="form-control btn btn-info" type="button" value="Incluir gente" (click)="createPeople()"/>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="container" *ngIf="artist == undefined">
+  <h2>Nos encontramos cargando la información........</h2>
+</div>
+<div class="container" *ngIf="artist != undefined">
+  <div class="row">
+    <h2>{{title}}</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h4 class="page-header">Detalle del artista</h4>
+      <div class="form-group float-label-control">
+        <p><label>Nombre:</label> {{artist.name}}</p><br>
+        <p><label>Años:</label> {{artist.year}}</p><br>
+        <label>Estilos</label>
+        <table class="table table-inbox">
+          <tr *ngFor="let style of artist.styles">{{style.name}}</tr>
+        </table><br>
+        <label>Miembros</label>
+        <table class="table table-inbox">
+          <tr *ngFor="let people of artist.members">{{people.name}}</tr>
+        </table><br>
+        <label>Artistas relacionados</label>
+        <table class="table table-inbox">
+          <tr *ngFor="let art of artist.related">{{art.name}}</tr>
+        </table><br><br><br>
+        <input type="button" value="Regresar" class="col-md-6 form-control btn btn-warning" (click)="back($event)"/>
+        <input type="button" value="Actualizar" class="col-md-6 form-control btn btn-info" (click)="update($event)"/>
+        <input type="button" value="Eliminar" class="col-md-6 form-control btn btn-danger" (click)="delete(this.artist.id)"/>
+      </div>
+    </div>
+  </div>
+  </div>

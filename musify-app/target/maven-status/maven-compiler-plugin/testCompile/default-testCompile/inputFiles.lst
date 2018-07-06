@@ -1,0 +1,4 @@
+/home/argenis/musify-app/src/test/java/com/musify/app/ApplicationTests.java
+/home/argenis/musify-app/src/test/java/com/musify/app/web/controllers/PeopleControllerTests.java
+/home/argenis/musify-app/src/test/java/com/musify/app/web/controllers/StyleControllerTests.java
+/home/argenis/musify-app/src/test/java/com/musify/app/web/controllers/ArtistControllerTests.java

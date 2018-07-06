@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <h2>{{title}}</h2>
+
+    <hr />
+
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="page-header">Información de la gente</h4>
+        <form role="form" [formGroup]="peopleForm" name="artistForm" (submit)="action($event)" novalidate>
+          <div class="form-group float-label-control">
+            <label>Nombre</label>
+            <input type="text" maxlength="125" formControlName="name" class="form-control" placeholder="Nombre" required>
+            <div *ngIf="!peopleForm.controls.name.valid" class="help-block">Nombre es requerido</div>
+          </div>
+          <div class="form-group float-label-control">
+            <label>Años</label>
+            <input type="number" min="12" formControlName="years" class="form-control" placeholder="Años">
+            <div *ngIf="!peopleForm.controls.years.valid" class="help-block">Años debe ser igual o mayor a 12</div>
+          </div>
+          <br><br><br>
+          <div align="right"><input type="button" value="Regresar" (click)="back($event)" class="form-control btn btn-warning"/></div>
+          <div align="right"><input type="submit" value="{{operation}}" class="form-control btn btn-success"/></div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

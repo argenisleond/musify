@@ -1,0 +1,14 @@
+com/musify/app/repositories/StyleRepository.class
+com/musify/app/entities/People.class
+com/musify/app/ProdConfig.class
+com/musify/app/Application.class
+com/musify/app/web/controllers/PeopleController.class
+com/musify/app/web/controllers/StyleController.class
+com/musify/app/entities/AbstractEntity.class
+com/musify/app/entities/Style.class
+com/musify/app/entities/Artist.class
+com/musify/app/repositories/PeopleRepository.class
+com/musify/app/repositories/ArtistRepository.class
+com/musify/app/web/controllers/ArtistController.class
+com/musify/app/ProdConfig$1.class
+com/musify/app/HomeController.class

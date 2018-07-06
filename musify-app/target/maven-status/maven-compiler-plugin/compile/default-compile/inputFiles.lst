@@ -1,0 +1,12 @@
+/home/argenis/musify-app/src/main/java/com/musify/app/entities/Style.java
+/home/argenis/musify-app/src/main/java/com/musify/app/web/controllers/ArtistController.java
+/home/argenis/musify-app/src/main/java/com/musify/app/repositories/PeopleRepository.java
+/home/argenis/musify-app/src/main/java/com/musify/app/web/controllers/StyleController.java
+/home/argenis/musify-app/src/main/java/com/musify/app/web/controllers/PeopleController.java
+/home/argenis/musify-app/src/main/java/com/musify/app/entities/AbstractEntity.java
+/home/argenis/musify-app/src/main/java/com/musify/app/entities/People.java
+/home/argenis/musify-app/src/main/java/com/musify/app/ProdConfig.java
+/home/argenis/musify-app/src/main/java/com/musify/app/repositories/ArtistRepository.java
+/home/argenis/musify-app/src/main/java/com/musify/app/entities/Artist.java
+/home/argenis/musify-app/src/main/java/com/musify/app/Application.java
+/home/argenis/musify-app/src/main/java/com/musify/app/repositories/StyleRepository.java

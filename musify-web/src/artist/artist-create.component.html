@@ -1,0 +1,48 @@
+<div class="container" *ngIf="artistList?.length == 0">
+  <h2>Nos encontramos cargando la información........</h2>
+</div>
+<div class="container" *ngIf="artistList?.length > 0 && peopleList?.length > 0 && stylesList?.length > 0">
+  <div class="row">
+    <h2>{{title}}</h2>
+
+    <hr />
+
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="page-header">Información del artista</h4>
+        <form role="form" [formGroup]="artistForm" name="artistForm" (submit)="action($event)" novalidate>
+          <div class="form-group float-label-control">
+            <label>Nombre</label>
+            <input type="text" maxlength="125" formControlName="name" class="form-control" placeholder="Nombre" required>
+            <div *ngIf="!artistForm.controls.name.valid" class="help-block">Nombre es requerido</div>
+          </div>
+          <div class="form-group float-label-control">
+            <label>Años</label>
+            <input type="number" min="12" formControlName="year" class="form-control" placeholder="Años">
+            <div *ngIf="!artistForm.controls.year.valid" class="help-block">Años debe ser igual o mayor a 12</div>
+          </div>
+          <div class="form-group float-label-control">
+            <angular2-multiselect [data]="stylesList" [(ngModel)]="selectedStyles"
+                                  [settings]="styleDropdownSettings"
+                                  [selectedItems]="selectedStyles" [ngModelOptions]="{standalone: true}"></angular2-multiselect>
+          </div>
+          <div class="form-group float-label-control">
+            <angular2-multiselect [data]="peopleList" [(ngModel)]="selectedPeople"
+                                  [settings]="peopleDropdownSettings"
+                                  [selectedItems]="selectedPeople" [ngModelOptions]="{standalone: true}"></angular2-multiselect>
+          </div>
+
+          <div class="form-group float-label-control">
+            <angular2-multiselect [data]="artistList" [(ngModel)]="selectedArtists"
+                                  [settings]="artistDropdownSettings"
+                                  [selectedItems]="selectedArtists" [ngModelOptions]="{standalone: true}"></angular2-multiselect>
+          </div>
+          <br><br><br>
+          <div align="right"><input type="button" value="Regresar" (click)="back($event)" class="form-control btn btn-warning"/></div>
+          <div align="right"><input type="submit" value="{{operation}}" class="form-control btn btn-success"/></div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
